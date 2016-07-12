@@ -10,7 +10,11 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set font according to system
 if has("mac") || has("macunix")
-    set gfn=Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
+    set gfn=Fira\ Code:h15,Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
+	if has("gui_macvim")
+		set macligatures
+		set guifont=FiraCode-Retina:h15
+	endif
 elseif has("win16") || has("win32")
     set gfn=Hack:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
 elseif has("gui_gtk2")
@@ -20,6 +24,7 @@ elseif has("linux")
 elseif has("unix")
     set gfn=Monospace\ 11
 endif
+
 
 " " Open MacVim in fullscreen mode
 " if has("gui_macvim")
