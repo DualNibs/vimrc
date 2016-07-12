@@ -11,9 +11,14 @@
 " Set font according to system
 if has("mac") || has("macunix")
     set gfn=Fira\ Code:h15,Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
+	let g:solarized_termcolors=256
+
 	if has("gui_macvim")
 		set macligatures
 		set guifont=FiraCode-Retina:h15
+		set t_Co=256						" 256 color mode
+		set cursorline						" highlight current line
+		highlight CursorLine guibg=#003853 ctermbg=24 gui=none cterm=none
 	endif
 elseif has("win16") || has("win32")
     set gfn=Hack:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
@@ -40,7 +45,9 @@ set guioptions-=L
 
 " Colorscheme
 set background=dark
-colorscheme peaksea
+" colorscheme peaksea
+colors solarized
+colorscheme solarized
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
